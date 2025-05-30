@@ -7,27 +7,10 @@ Welcome to the Identity Reconciliation service for Bitespeed! This backend servi
 ### Endpoint: /identify
 Method: POST  
 URL: https://identity-reconciliation.onrender.com/id
-### Request Body:
-```json
-{
-  "email": "john@example.com",
-  "phoneNumber": "1234567890"
-}
+
 ## 🧩 Problem Statement
 **FluxKart.com** collects customer data through Bitespeed to deliver personalized experiences. However, to maintain privacy, customers sometimes use different contact details for each transaction. This service identifies and links such multiple entries to a unified user identity using a relational model.
-## 📊 Database Schema
-The service uses a Contact` table with the following structure:
-```ts
-{
-  id: number,
-  phoneNumber?: string,
-  email?: string,
-  linkedId?: number,           // references the primary contact
-  linkPrecedence: "primary" | "secondary",
-  createdAt: Date,
-  updatedAt: Date,
-  deletedAt?: Date
-}
+
 ## 📌 Features
 - Accepts email and/or phone number
 - Identifies whether the contact is primary or secondary
@@ -51,3 +34,24 @@ The service uses a Contact` table with the following structure:
 - Handles linked/related data efficiently
 - Reliable and open source
 - Works seamlessly with Prisma
+
+  ## 📊 Database Schema
+The service uses a Contact` table with the following structure:
+```ts
+{
+  id: number,
+  phoneNumber?: string,
+  email?: string,
+  linkedId?: number,           // references the primary contact
+  linkPrecedence: "primary" | "secondary",
+  createdAt: Date,
+  updatedAt: Date,
+  deletedAt?: Date
+}
+
+### Request Body:
+```json
+{
+  "email": "john@example.com",
+  "phoneNumber": "1234567890"
+}
