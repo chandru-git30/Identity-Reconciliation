@@ -6,7 +6,7 @@ Welcome to the Identity Reconciliation service for Bitespeed! This backend servi
 ## 🛠️ API Usage
 ### Endpoint: /identify
 Method: POST  
-URL: https://identity-reconciliation.onrender.com/id
+URL: https://identity-reconciliation-lqta.onrender.com/identify  
 
 ## 🧩 Problem Statement
 **FluxKart.com** collects customer data through Bitespeed to deliver personalized experiences. However, to maintain privacy, customers sometimes use different contact details for each transaction. This service identifies and links such multiple entries to a unified user identity using a relational model.
