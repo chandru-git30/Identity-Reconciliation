@@ -47,10 +47,10 @@ The service uses a Contact` table with the following structure:
   createdAt: Date,
   updatedAt: Date,
   deletedAt?: Date
-}
+} 
 
 ### Request Body:
-```json
+json
 {
   "email": "john@example.com",
   "phoneNumber": "1234567890"
