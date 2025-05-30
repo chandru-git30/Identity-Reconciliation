@@ -24,7 +24,6 @@ function formatResponse(primary, contacts) {
 }
 
 app.post('/identify', async (req, res) => {
-  console.log("---->getting in");
   const { email, phoneNumber } = req.body;
 
   if (!email && !phoneNumber) {
